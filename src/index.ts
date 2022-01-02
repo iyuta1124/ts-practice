@@ -28,7 +28,10 @@
 // tupleSample()
 
 // ジェネリック型とポリモーフィズム
-import genericsBasicSample from './generics/basic'
-import genericAdvanceSample from './generics/adbanced'
-genericsBasicSample()
-genericAdvanceSample()
+// import genericsBasicSample from './generics/basic'
+// import genericAdvanceSample from './generics/adbanced'
+// genericsBasicSample()
+// genericAdvanceSample()
+
+import callbaclSample from './asynchronous/callback'
+callbaclSample()

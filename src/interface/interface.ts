@@ -28,3 +28,34 @@ const Mabodon: Mabodon = {
   spicylebel: 10,
   gram: 122,
 }
+
+interface Book {
+  page: number
+  title: string
+}
+
+interface Magazine extends Book {
+  cycle: 'dairy' | 'weekly'
+}
+
+const jump: Magazine = {
+  page: 300,
+  title: 'ジャンプ',
+  cycle: 'weekly',
+}
+
+class Comic implements Book {
+  page: number
+  title: string
+
+  constructor(page: number, title: string, private publishYear: string) {
+    ;(this.page = page), (this.title = title)
+  }
+
+  getPublishYear() {
+    return [this.title, this.publishYear]
+  }
+}
+
+const popularComic = new Comic(200, '鬼滅の刃', '2021')
+console.log(popularComic.getPublishYear())
